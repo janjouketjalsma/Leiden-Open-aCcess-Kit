@@ -1,0 +1,12 @@
+[21-May-2016 15:17:20 UTC] PHP Fatal error:  Call to undefined method SQLite3Result::sqlite_num_rows() in /home/ubuntu/workspace/api/handler.php on line 36
+[21-May-2016 15:17:20 UTC] PHP Stack trace:
+[21-May-2016 15:17:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/handler.php:0
+[21-May-2016 15:17:20 UTC] PHP   2. getPublishers() /home/ubuntu/workspace/api/handler.php:12
+[21-May-2016 15:17:56 UTC] PHP Fatal error:  Call to undefined function sqlite_num_rows() in /home/ubuntu/workspace/api/handler.php on line 36
+[21-May-2016 15:17:56 UTC] PHP Stack trace:
+[21-May-2016 15:17:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/handler.php:0
+[21-May-2016 15:17:56 UTC] PHP   2. getPublishers() /home/ubuntu/workspace/api/handler.php:12
+[21-May-2016 15:18:36 UTC] PHP Fatal error:  Call to undefined method SQLite3Result::numRows() in /home/ubuntu/workspace/api/handler.php on line 36
+[21-May-2016 15:18:36 UTC] PHP Stack trace:
+[21-May-2016 15:18:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/handler.php:0
+[21-May-2016 15:18:36 UTC] PHP   2. getPublishers() /home/ubuntu/workspace/api/handler.php:12
