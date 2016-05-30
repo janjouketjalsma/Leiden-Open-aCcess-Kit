@@ -13,6 +13,7 @@
         private $status;
         private $year;
         private $type;
+		private $message;
         private $CROSSREF_URL = "http://api.crossref.org/works/"; //only works for crossref issued doi
         
         
@@ -26,17 +27,18 @@
             $this->status = $json['status'];
             if ($json['status']=='ok') {
                 $message = $json['message'];
+				$this->message = $message;
                 $this->publisher = $message['publisher'];
                 $this->issue = $message['issue'];
                 $this->type = $message['type'];
-                $this->issn = $message['issn'];
+                $this->issn = $message['ISSN'];
+				if (is_array($this->issn)) $this->issn = $this->issn[0];
                 $this->journal = $message['container-title'];
                 $this->page = $message['page'];
                 $this->title = implode("; ",$message['title']);
                 $this->volume = $message['volume'];
                 $this->url = $message['URL'];
                 $issued = $message['issued'];
-                
                 $dateparts = $issued['date-parts'];
                 $this->year = $dateparts[0][0];
                 foreach($message['author'] as $author) {

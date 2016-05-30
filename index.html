@@ -65,9 +65,9 @@
         <script type="text/javascript">
             $('#journalSrch').keypress(function(e) {
                                       if(e.which == 13) {
-                                      var searchTerm = $('#journalSrch').val();
-                                      checkJournal(searchTerm);
-                                      return false;
+										var searchTerm = $('#journalSrch').val();
+										checkJournal(searchTerm);
+										return false;
                                       }
                                       });
             $('#findJournalBtn').click(function() {
@@ -77,7 +77,9 @@
             });
             
             function checkJournal(searchTerm) {
-                $.get( "api/handler.php?action=search&q=" + searchTerm, function( data ) {
+													var url = "api/handler.php?action=search&q=" + searchTerm;
+
+                $.get(url, function( data ) {
                       $( "#searchResult" ).html( data.html );
                       });
             }

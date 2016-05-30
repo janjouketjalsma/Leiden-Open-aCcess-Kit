@@ -104,6 +104,7 @@
                     
                 $answer .= "<tr><td><strong>Publisher's Version/PDF</strong></td><td>author <strong>".$publisher->pdfversion->pdfarchiving."</strong> archive publisher's version/PDF</td></tr>";
                     $answer .= "<tr><td><strong>Restrictions</strong></td><td><ul>";
+					$pdfrestrictions = $publisher->pdfversion->pdfrestrictions;
                     foreach ($pdfrestrictions->pdfrestriction As $pdfrestriction) {
                         $answer .= "<li>".$pdfrestriction."</li>";
                     }
