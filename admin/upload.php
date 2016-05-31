@@ -1,4 +1,5 @@
 <?php
+	require("require-login.php");
 	set_time_limit(0);
 	require_once('../JournalRecord.php');
 	require_once('../db.php');

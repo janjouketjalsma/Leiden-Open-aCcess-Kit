@@ -1,5 +1,6 @@
 
 
+<?php require("require-login.php"); ?>
 <html>
     <head><title>Batch upload</title></head>
     <body>
