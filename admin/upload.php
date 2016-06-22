@@ -17,6 +17,7 @@ $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 
+    echo($target_file);
 // Check if file already exists
 if (file_exists($target_file)) {
     echo "Sorry, file already exists.";
@@ -28,10 +29,10 @@ if ($_FILES["fileToUpload"]["size"] > 50000000) {
     $uploadOk = 0;
 }
 // Allow certain file formats
-if($imageFileType != "xls" && $imageFileType != "xlsx") {
+/*if($imageFileType != "xls" && $imageFileType != "xlsx") {
     echo "Sorry, only xls and xlsx extensions are allowed.";
     $uploadOk = 0;
-}
+}*/
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
